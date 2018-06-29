@@ -20,13 +20,17 @@ revert occurred.
 'VM Exception while processing transaction: revert...'
 ```
 
-Versions
+# Screen cast demonstrating issue
+  * [Asciinema screencast of
+issue](https://asciinema.org/a/zWISMUH3Wum6pDMAex4zXI7IT)
+
+# Versions
   * node: v9.11.2
   * truffle@4.1.12
   * ganache-cli@6.1.3
 
 
-Reproduce:
+# Reproduce
 
 1. git clone this repo
 2. start ganache-cli -b 1
