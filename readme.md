@@ -5,7 +5,7 @@ behaves differently with a set blocktime vs no blocktime set.
 
 With block time set `ganache-cli -b 1` the exception message includes the
 transaction id with what seems like a developer hint message instead of
-indicating what kind of error was encountered.
+indicating what kind of error occurred.
 
 ```
 Transaction: 0x3d45180a08e8c3696285352e2758da453c0e804f2f90df56593a3976c339acdd exited with an error (status 0).
@@ -20,12 +20,18 @@ revert occurred.
 'VM Exception while processing transaction: revert...'
 ```
 
+Versions
+  * node: v9.11.2
+  * truffle@4.1.12
+  * ganache-cli@6.1.3
+
+
 Reproduce:
 
 1. git clone this repo
 2. start ganache-cli -b 1
-3. run `truffle test` and observe the error
+3. run `truffle test` and observe the error with transaction hint.
 
 If you run `ganache-cli` with no blocktime set, you will see truffle test
-behaves differently
+fail with exception indicating a revert occurred.
 
